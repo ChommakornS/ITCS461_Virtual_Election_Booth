@@ -1,0 +1,30 @@
+<?php
+	// require 'database/dbcon.php';
+	// session_start(); 
+	
+	// if(!ISSET($_SESSION['voters_id'])){
+	// 	header("location:index.php");
+	// }else{
+	// 	$session_id=$_SESSION['voters_id'];
+	// 	$user_query = $conn->query("SELECT * FROM user WHERE user_id = '$session_id'") or die(mysqli_errno());
+	// 	$user_row = $user_query->fetch_array();
+	// 	$user_username = $user_row['firstname']." ".$user_row['lastname'];
+	// }
+	require 'database/dbcon.php';
+
+	session_start();
+
+	if(!isset($_SESSION['voters_id'])){
+		header("location:index.php");
+	} else {
+		$session_id = $_SESSION['voters_id'];
+		$user_query = $conn->query("SELECT * FROM user WHERE user_id = '$session_id'") or die(mysqli_errno());
+		$user_row = $user_query->fetch_array();
+
+		if ($user_row !== null) {
+			$user_username = $user_row['firstname'] . " " . $user_row['lastname'];
+		} else {
+			$user_username = ""; // or set a default value
+		}
+	}
+?>

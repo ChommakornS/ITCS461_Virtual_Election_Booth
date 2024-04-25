@@ -20,16 +20,16 @@
                 $count2 = $conn->query("SELECT COUNT(*) as total FROM `voters` WHERE `status` = 'Unvoted'")->fetch_array();
                 ?>
                 <a href="voters.php" class="btn btn-primary btn-outline"><i class="fa fa-paw"></i> ALL Voters (<?php echo $count['total'] ?>)</a>
-                <a href="voted.php" class="btn btn-success btn-outline"><i class="fa fa-paw"></i> Voted(<?php echo $count1['total'] ?>)</a>
+                <!-- <a href="voted.php" class="btn btn-success btn-outline"><i class="fa fa-paw"></i> Voted(<?php echo $count1['total'] ?>)</a>
                 <a href="unvoted.php" class="btn btn-danger btn-outline"><i class="fa fa-paw"></i> Unvoted(<?php echo $count2['total'] ?>) </a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                
+                 -->
                 <!-- update acive status -->
                 <a href="update_status.php" class="btn btn-danger btn-outline pull-right" style="margin-right:12px;" name="go"><i class="fa fa-asterisk fa-spin"></i> Activate All Voters Account</a>
-                <a href="generate_password.php" class="btn btn-success btn-outline pull-right" name="go"><i class="fa fa-spinner fa-spin"></i> Generate Voters Password</a>
+                <!-- <a href="generate_password.php" class="btn btn-success btn-outline pull-right" name="go"><i class="fa fa-spinner fa-spin"></i> Generate Voters Password</a> -->
                 <br />
                 <br />
-                <a href="download.php" class="btn btn-success btn-outline"><i class="glyphicon glyphicon-save"></i> Import Data (csv exel file)</a>
-                <a href="../register/index.php" class="btn btn-primary btn-outline"><i class="fa fa-paw"></i> Add Voters</a>
+                <!-- <a href="download.php" class="btn btn-success btn-outline"><i class="glyphicon glyphicon-save"></i> Import Data (csv exel file)</a> -->
+                <!-- <a href="../register/index.php" class="btn btn-primary btn-outline"><i class="fa fa-paw"></i> Add Voters</a> -->
 
 
                 <hr />

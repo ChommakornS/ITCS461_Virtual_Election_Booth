@@ -41,7 +41,7 @@ $candidate_repo = new CandidateRepository();
                                         <h2 class="nameCard"><?php echo $fetch['firstname'] . " " . $fetch['lastname'] ?></h2>
                                         <p class="levelCard"><?php echo $fetch['year_level'] ?></p>
                                         <div class="voteCheck fancyCheckbox">
-                                            <span class="vote_text">Je vote </span><input type="checkbox" value="<?php echo $fetch['candidate_id']; ?>" name="<?php echo $poste['class_name'] . "_id"; ?>" class="<?php echo $poste['class_name']; ?>">
+                                            <span class="vote_text">Vote </span><input type="checkbox" value="<?php echo $fetch['candidate_id']; ?>" name="<?php echo $poste['class_name'] . "_id"; ?>" class="<?php echo $poste['class_name']; ?>">
                                         </div>
                                     </div>
                                 </div>

@@ -9,7 +9,8 @@
     </div>
     <div class="container">
         <div class="row">
-            <center> <img src="./images/DQOL.png" alt="" width="80px" style="margin-top:10px;" /></center>
+            <!-- <center> <img src="./images/DQOL.png" alt="" width="80px" style="margin-top:10px;" /></center> -->
+            <center><br><br></center>
             <center>
                 <h3 style="margin-bottom:-40px;"> <?php echo APP_NAME_USER ?> </h3>
             </center>

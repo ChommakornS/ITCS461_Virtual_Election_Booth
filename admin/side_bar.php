@@ -57,16 +57,14 @@
                     <!-- /.nav-second-level -->
                 </li>
 
-                <li>
+                <!-- <li>
                     <a target="blank" href="../results.php?token=DQOL2024"><i class="fa fa-download fa-fw"></i> Canvassing Report</a>
-                </li>
+                </li> -->
 
                 <li>
                     <a href="#"><i class="fa fa-user fa-fw"></i> User<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li>
-                            <a href="user.php"> <i class="fa fa-users"></i> View User</a>
-                        </li>
+                      
                         <li>
                             <a href="logout.php"> <i class="fa fa-sign-out"></i>Logout</a>
                         </li>

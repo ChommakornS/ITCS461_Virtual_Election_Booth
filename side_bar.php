@@ -3,9 +3,9 @@
         <a class="titleName" href="/vote/index.php"> DQOL. Election System</a>
     </div>
 
-    <div class="navbarImg">
+    <!-- <div class="navbarImg">
         <img src="./images/vote.png" alt="Logo"/>
-    </div>
+    </div> -->
 
     <div class="user">
         

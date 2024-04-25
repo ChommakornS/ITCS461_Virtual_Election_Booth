@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2024 at 08:48 PM
+-- Generation Time: Apr 25, 2024 at 01:33 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -99,7 +99,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `firstname`, `lastname`) VALUES
-(1, 'admin', '$2y$10$qHPItGj1whb4MFcCJAqhR.Mq7tQi94TVV0HFQs/hSiwT0twDT04S2', 'Isaac', 'Ndema');
+(1, 'admin', '$2y$10$qHPItGj1whb4MFcCJAqhR.Mq7tQi94TVV0HFQs/hSiwT0twDT04S2', 'kafka', 'kim');
 
 -- --------------------------------------------------------
 
@@ -109,7 +109,7 @@ INSERT INTO `user` (`user_id`, `username`, `password`, `firstname`, `lastname`) 
 
 CREATE TABLE `voters` (
   `voters_id` int(11) NOT NULL,
-  `id_number` varchar(6) NOT NULL,
+  `id_number` varchar(13) NOT NULL,
   `password` varchar(100) NOT NULL,
   `firstname` varchar(100) NOT NULL,
   `lastname` varchar(100) NOT NULL,
@@ -123,17 +123,26 @@ CREATE TABLE `voters` (
 --
 
 INSERT INTO `voters` (`voters_id`, `id_number`, `password`, `firstname`, `lastname`, `year_level`, `status`, `account`) VALUES
-(11, '17P123', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'Isaac', 'Ndema', '4th Year', 'Voted', 'Active'),
-(12, '17P124', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'Isaac', 'Isa', '5th Year', 'UnVoted', 'Active'),
-(13, '17P125', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'User', '1', '3rd Year', 'UnVoted', 'Active'),
-(14, '17P126', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'User', '2', '1st Year', 'UnVoted', 'Active'),
-(15, '17P128', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'Test', 'Isaac', '4th Year', 'Unvoted', 'Active'),
-(16, '17P150', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'voter', 'viter', '3rd Year', 'Voted', 'Active'),
-(17, '17P160', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'Isa', 'Kalaka', '4th Year', 'Voted', 'Active'),
-(19, '17P201', '$2y$10$WY9QrclADsJRFyTYjVHeq.zbyKEkDsdIJKMsXHdd2AoH3Bp5dRxeC', 'Issaac', 'NDEMA', '1st Year', 'Unvoted', 'Active'),
-(20, '789789', '$2y$10$3JBM4UBfmbZkHe3hHVR.A.FsMxvsRgMQPBiUuilSbIxuvjOcQMAjO', 'Asahi', 'Hamada', '2nd Year', 'Voted', 'Active'),
-(23, '989898', '$2y$10$mW84rmLK0Vu/iWjKi77AhuNoMx7c7MZcE1U8lfWO2s6A/Hk.FG2Ve', 'Junkyu', 'Kim', '', 'Voted', 'Active'),
-(24, '765676', '$2y$10$4IZZCIC/lE9bsHDayaP4nuGo0o30pKkK.Cgy0K0t/SqkL0pr8EcBK', 'Hyunsuk', 'Choi', '', 'Voted', 'Active');
+(11, '7717229422087', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'Isaac', 'Ndema', '', 'Voted', 'Active'),
+(12, '8937067448086', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'Isaac', 'Isa', '', 'UnVoted', 'Active'),
+(13, '0422224878120', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'User', '1', '', 'UnVoted', 'Active'),
+(14, '6362286845542', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'User', '2', '', 'UnVoted', 'Active'),
+(15, '6979079969177', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'Test', 'Isaac', '', 'Unvoted', 'Active'),
+(16, '4324851917902', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'voter', 'viter', '', 'Voted', 'Active'),
+(17, '4003741026634', '$2y$10$Kq.s3scJIiFyRW9c9zRom.Uk/qXhfSp4Wqi.pCMkNZd2ajKBkK8h2', 'Isa', 'Kalaka', '', 'Voted', 'Active'),
+(19, '3239083355649', '$2y$10$WY9QrclADsJRFyTYjVHeq.zbyKEkDsdIJKMsXHdd2AoH3Bp5dRxeC', 'Issaac', 'NDEMA', '', 'Unvoted', 'Active'),
+(20, '9068072826959', '$2y$10$3JBM4UBfmbZkHe3hHVR.A.FsMxvsRgMQPBiUuilSbIxuvjOcQMAjO', 'Asahi', 'Hamada', '', 'Voted', 'Active'),
+(23, '5697095319187', '$2y$10$mW84rmLK0Vu/iWjKi77AhuNoMx7c7MZcE1U8lfWO2s6A/Hk.FG2Ve', 'Junkyu', 'Kim', '', 'Voted', 'Active'),
+(24, '3902097198816', '$2y$10$4IZZCIC/lE9bsHDayaP4nuGo0o30pKkK.Cgy0K0t/SqkL0pr8EcBK', 'Hyunsuk', 'Choi', '', 'Voted', 'Active'),
+(26, '4340693127340', '$2y$10$AUwt4cyKXOeUQIFW4qP6zONvqJnfWTUOvC3avbZ3B.l54O9xD8aa2', 'ks', 'ks', '', 'Voted', 'Active'),
+(28, '5057293412507', '$2y$10$.PWXKhkU9QaJ4sU08Me32u4IxR4gG1DHgmlw.PpxEk3Dh/mHr4Zzi', 'itthi', 'pol', '', 'Voted', 'Active'),
+(29, '5182825415014', '$2y$10$6y/rPNZQHBpnienP0xuAkO0ys1snFB5G3a3z2k.eqTfhPrjQGcpOu', 'jing', 'prx', '', 'Voted', 'Active'),
+(30, '1437434107988', '$2y$10$XXI1ylW1qdnDT79UNfnuPOIy/gjHSZHsvE9z1OL2h7CfftWETbKDm', 'Bus', 'becauseofu', '', 'Voted', 'Active'),
+(31, '3051111462387', '$2y$10$I72Sdvdf/eCy4AR5boSKnemXpjXRPHOTmn0yAFuUHK1I1jqlpvv1y', 'Natty', 'eiei', '', 'Voted', 'Active'),
+(32, '2457078249764', '$2y$10$5nx8V2Qn7vHQa8Q8V25ANufx8ftCprH8K5ys2toaC8C6DdZ2H3E5e', 'Jeff', 'Satur', '', 'Voted', 'Active'),
+(33, '4913071053002', '$2y$10$tFWSWP3L6EBnmLh2hD.kruygofGOKv6QmHeFrOGi1shPeCtEjVxS2', 'something', 'prx', '', 'Voted', 'Active'),
+(34, '6217449561178', '$2y$10$22CNvq3VMz.mYyaWMUFa8eUY8pcql5hZZA74uktfOtLpTxAy7fwry', 'sheesh', 'baemon', '', 'Voted', 'Active'),
+(35, '6456070777327', '$2y$10$GQQwgeDtmmVV6wgNiCMzP.f6LvkaUc/LCOUI7slP/egVkPON5Fory', 'aa', 'bbb', '', 'Voted', 'Active');
 
 -- --------------------------------------------------------
 
@@ -192,7 +201,17 @@ INSERT INTO `votes` (`vote_id`, `candidate_id`, `voters_id`, `poste_class_name`)
 (191, '16', '20', 'censeur1'),
 (192, '0', '20', 'censeur2'),
 (193, '1', '23', 'Priminister'),
-(194, '12', '24', 'Priminister');
+(194, '12', '24', 'Priminister'),
+(195, '1', '26', 'Priminister'),
+(196, '1', '28', 'Priminister'),
+(197, '0', '', 'Priminister'),
+(198, '12', '29', 'Priminister'),
+(199, '1', '30', 'Priminister'),
+(200, '1', '31', 'Priminister'),
+(201, '1', '32', 'Priminister'),
+(202, '12', '33', 'Priminister'),
+(203, '1', '34', 'Priminister'),
+(204, '2', '35', 'Priminister');
 
 --
 -- Indexes for dumped tables
@@ -249,19 +268,19 @@ ALTER TABLE `postes`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `voters`
 --
 ALTER TABLE `voters`
-  MODIFY `voters_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `voters_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `votes`
 --
 ALTER TABLE `votes`
-  MODIFY `vote_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
+  MODIFY `vote_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

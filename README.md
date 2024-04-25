@@ -27,5 +27,5 @@
 3. After admin activated the voters account, voters can log in to see the candidate and submit their votes.
 
 
-This project is modification fron this repository.
+This project is modification from this repository.
 Thanks for `https://github.com/script-0/XVote.git`
